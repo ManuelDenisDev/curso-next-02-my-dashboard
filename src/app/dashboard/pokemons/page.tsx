@@ -1,6 +1,11 @@
 import { PokemonGridName, PokemonsResponse, SimplePokemon } from '@/pokemons'
 
-const getPokemons = async (limit = 20, offset = 0): Promise<SimplePokemon[]> => {
+export const metadata = {
+  title: '151 Nombres Pokémons',
+  description: 'Listado de los primeros 151 pokémons con sus nombres',
+}
+
+const getPokemons = async (limit = 151, offset = 0): Promise<SimplePokemon[]> => {
   const data: PokemonsResponse = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`).then(
     (response) => response.json()
   )
@@ -19,7 +24,7 @@ export default async function PokemonsPage() {
   return (
     <div className='flex flex-col'>
       <span className='my-2 text-5xl'>
-        Listado de Pokémons <small>NAME</small>
+        Listado de Pokémons <small className='text-blue-500'>NAME</small>
       </span>
       <PokemonGridName pokemons={pokemons} />
     </div>
