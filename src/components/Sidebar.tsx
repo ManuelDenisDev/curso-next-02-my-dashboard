@@ -16,10 +16,16 @@ const menuItems = [
     subtitle: 'Contador Client Side',
   },
   {
+    path: '/dashboard/pokemon',
+    icon: <IoFootball size={40} />,
+    title: 'Pokemon',
+    subtitle: 'Generados por ID',
+  },
+  {
     path: '/dashboard/pokemons',
     icon: <IoFootball size={40} />,
     title: 'Pokemons',
-    subtitle: 'Generacion Estatica',
+    subtitle: 'Generados por NAME',
   },
 ]
 
@@ -36,10 +42,10 @@ export function Sidebar() {
             ManDen<span className='text-blue-500'>Dev</span>.
           </span>
         </h1>
-        <p className='text-sm text-slate-500'>Manage your actions and activities</p>
+        <p className='text-sm text-slate-500'>2 proy. del curso de Next</p>
       </div>
       <div id='profile' className='px-6 py-10'>
-        <p className='text-slate-500'>Welcome back,</p>
+        <p className='text-slate-500'>Bienvenido de nuevo,</p>
         <a href='#' className='inline-flex items-center space-x-2'>
           <span>
             <Image

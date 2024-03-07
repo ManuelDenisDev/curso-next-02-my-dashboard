@@ -7,7 +7,7 @@ interface PokemonCardProps {
   pokemon: SimplePokemon
 }
 
-export function PokemonCard({ pokemon }: PokemonCardProps) {
+export function PokemonCardName({ pokemon }: PokemonCardProps) {
   const { id, name } = pokemon
 
   return (
@@ -25,7 +25,7 @@ export function PokemonCard({ pokemon }: PokemonCardProps) {
           <p className='pt-2 text-lg font-semibold capitalize text-gray-50'>{name}</p>
           <div className='mt-5'>
             <Link
-              href={`/dashboard/pokemon/${id}`}
+              href={`/dashboard/pokemon/${name}`}
               className='rounded-full border px-4 py-2 text-xs font-semibold text-gray-100'>
               Mas información
             </Link>
